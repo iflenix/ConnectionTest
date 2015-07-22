@@ -15,7 +15,8 @@
         android:text="New Button"
         android:id="@+id/button"
         android:layout_below="@+id/net_state_textview"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonClick"/>
 
     <TextView
         android:layout_width="wrap_content"

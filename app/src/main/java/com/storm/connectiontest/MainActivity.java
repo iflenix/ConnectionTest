@@ -10,8 +10,10 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -100,5 +102,10 @@ public class MainActivity extends Activity {
        unregisterReceiver(connChangeReceiver);
         unregisterReceiver(wifiStateReceiver);
         super.onDestroy();
+    }
+
+    public void onButtonClick(View view) {
+        Intent intent =  new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+        startActivity(intent);
     }
 }
